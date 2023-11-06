@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "antd": "^5.7.1",
+    "@ant-design/cssinjs": "^1.17.0",
+    "@ant-design/icons": "^5.2.6",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
     "next": "13.4.10",

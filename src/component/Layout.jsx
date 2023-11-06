@@ -6,7 +6,7 @@ import {
   TeamOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import { Breadcrumb, Layout, Menu, theme } from "antd";
+import { Breadcrumb, Collapse, Layout, Menu, Typography, theme } from "antd";
 const { Header, Content, Footer, Sider } = Layout;
 
 const items = [
@@ -17,7 +17,7 @@ const items = [
   },
   {
     key: "/test-scenario",
-    icon: <PieChartOutlined />,
+    icon: <TeamOutlined />,
     label: "Test Skenario",
   },
 ];
@@ -38,10 +38,20 @@ const LayoutComponent = ({ children }) => {
         collapsed={collapsed}
         onCollapse={(value) => setCollapsed(value)}
       >
-        <div className="demo-logo-vertical" />
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          {collapsed === true ? (
+            <Typography.Title style={{ color: "#fff" }} level={3}>
+              TB
+            </Typography.Title>
+          ) : (
+            <Typography.Title style={{ color: "#fff" }} level={3}>
+              TestBorg
+            </Typography.Title>
+          )}
+        </div>
         <Menu
           theme="dark"
-          defaultSelectedKeys={["dashboard"]}
+          defaultSelectedKeys={["/dashboard"]}
           mode="inline"
           items={items}
         />
@@ -50,6 +60,7 @@ const LayoutComponent = ({ children }) => {
         <Header
           style={{
             padding: 0,
+            margin: "1rem",
             background: colorBgContainer,
           }}
         />
