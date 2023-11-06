@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [targetUrl, setTargetUrl] = useState(
-    "http://104.248.154.192:4000/katalog/"
+    "https://kostzy.festiware.com/"
   );
   const handleFinish = (values) => {
     const { targetUrl: formTargetUrl } = values;
