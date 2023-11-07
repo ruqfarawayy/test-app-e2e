@@ -16,6 +16,11 @@ const Dashboard = () => {
     setTargetUrl(formTargetUrl);
   };
 
+  const recordUserActivity = (action) => {
+    // Lakukan sesuatu dengan tindakan yang direkam, seperti mengirimnya ke server atau menyimpan di state.
+    console.log(`Tindakan pengguna: ${action}`);
+  };
+
   const [data, setData] = useState(["Test Scenario 1", "Test Scenario 2"]);
   // const data = ["Test Scenario 1", "Test Scenario 2"];
   return (
@@ -74,7 +79,7 @@ const Dashboard = () => {
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <Typography.Title level={4}>Test Scenario</Typography.Title>
-                    <Button type="primary">Add</Button>
+                    <Button type="primary" onClick={recordUserActivity()}>Add</Button>
                   </div>
                 }
                 dataSource={data}
